@@ -3,173 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liang Feng (冯亮) - Personal Website</title>
+    <title>Liang Feng (冯亮)</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            /* 字体组合：标题用 Georgia (衬线)，正文用 Inter/System (无衬线) */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.7;
-            color: #0f172a;
-            background: #f9fafb;
+            color: #1a1a1a; /* 更深的纯黑，像印刷品 */
+            background: #fcfcfc; /* 极淡的暖白，不刺眼 */
             min-height: 100vh;
-            padding: 24px;
+            padding: 40px 20px;
+            margin: 0;
         }
-        
+
         .container {
-            max-width: 900px;
+            max-width: 800px; /* 稍微收窄，提升阅读体验 */
             margin: 0 auto;
             background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 18px;
-            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.07);
-            padding: 42px;
-            margin-top: 12px;
-            margin-bottom: 32px;
+            /* 去掉显眼的边框，用极轻微的阴影 */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 60px 50px; /* 增加内边距，留白更多 */
         }
         
         .header {
             text-align: center;
-            margin-bottom: 36px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 50px;
+        }
+        
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            /* 去掉粗边框，更自然 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            filter: grayscale(10%); /* 轻微去色，更有质感 */
+            transition: filter 0.3s ease;
+        }
+
+        .avatar:hover {
+            filter: grayscale(0%);
+        }
+        
+        h1 {
+            font-family: "Georgia", "Times New Roman", serif; /* 学术/杂志感 */
+            color: #111;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            font-weight: 400; /* 不加粗，更优雅 */
+            letter-spacing: -0.02em;
+        }
+        
+        .contact-links {
+            margin-top: 16px;
+            font-family: "Inter", sans-serif;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        .contact-links a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .contact-links a:hover {
+            color: #000;
+            border-bottom: 1px solid #000; /* 悬停显示下划线 */
         }
         
         .nav {
-            margin-top: 12px;
+            margin-top: 24px;
             display: flex;
             justify-content: center;
-            gap: 14px;
+            gap: 20px;
             flex-wrap: wrap;
         }
         
         .nav a {
-            color: #0f172a;
-            background: #f3f4f6;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 8px 12px;
+            font-family: "Georgia", serif;
+            font-style: italic;
+            color: #666;
             text-decoration: none;
-            font-size: 0.98em;
-            transition: all 0.18s ease;
+            font-size: 1.05em;
+            transition: color 0.2s ease;
         }
         
         .nav a:hover {
-            background: #e5f5ee;
-            border-color: #0ea371;
-            color: #0c8b60;
-            transform: translateY(-1px);
+            color: #000;
         }
-        
-        .avatar {
-            width: 176px;
-            height: 176px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #0ea371;
-            margin-bottom: 16px;
-            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
-        }
-        
-        h1 {
-            font-family: "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
-            color: #0f172a;
-            margin-bottom: 8px;
-            font-size: 2.25em;
-            letter-spacing: 0.2px;
-            font-weight: 700;
-        }
-        
-        .contact-links {
-            margin-top: 10px;
-        }
-        
-        .contact-links a {
-            color: #0ea371;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 1.05em;
-            font-weight: 600;
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-        
-        .contact-links a:hover {
-            color: #0c8b60;
-            transform: translateY(-1px);
-            text-decoration: underline;
-        }
-        
+
         section {
-            margin: 32px 0;
+            margin: 50px 0;
         }
         
         h2 {
-            font-family: "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
-            color: #0f172a;
-            margin-bottom: 14px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e5e7eb;
-            font-size: 1.7em;
-            letter-spacing: 0.15px;
-            font-weight: 700;
+            font-family: "Georgia", serif;
+            color: #111;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.6em;
+            font-weight: 400;
+            letter-spacing: -0.01em;
         }
         
         h3 {
-            color: #1f2937;
-            margin-top: 18px;
-            margin-bottom: 8px;
-            font-size: 1.15em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #222;
+            margin-top: 24px;
+            margin-bottom: 6px;
+            font-size: 1.1em;
             font-weight: 600;
         }
         
         p {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             text-align: justify;
+            color: #444;
+            font-size: 1.02em; /* 稍微大一点的正文 */
         }
         
         ul {
             margin-left: 20px;
-            margin-bottom: 16px;
+            color: #444;
         }
         
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #0ea371; /* 保留一点点 OpenAI 绿作为强调色，或者改用深蓝 */
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
         
         strong {
-            color: #111827;
+            color: #000;
+            font-weight: 600;
         }
         
         .footer {
             text-align: center;
-            margin-top: 28px;
-            padding-top: 18px;
-            border-top: 1px solid #e5e7eb;
-            color: #6b7280;
-            font-size: 0.95em;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+            font-family: "Georgia", serif;
+            font-style: italic;
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 22px;
+                padding: 30px 20px;
+                border: none;
+                box-shadow: none;
+                background: transparent;
             }
-            
-            h1 {
-                font-size: 1.9em;
-            }
-            
-            .avatar {
-                width: 136px;
-                height: 136px;
-            }
-            
-            .contact-links a {
-                display: block;
-                margin: 8px 0;
+            body {
+                padding: 0;
             }
         }
     </style>
@@ -180,17 +182,15 @@
             <img src="https://raw.githubusercontent.com/fenglang918/fenglang918/main/selfie.jpg" alt="Liang Feng" class="avatar">
             <h1>Liang Feng (冯亮)</h1>
             <div class="contact-links">
-                <a href="mailto:fenglang918@foxmail.com">📧 Email</a>
-                <a href="https://github.com/fenglang918">💻 GitHub</a>
-                <a href="https://www.xiaohongshu.com/user/profile/6120ecdb00000000010020ba">📷 RedNote</a>
+                <a href="mailto:fenglang918@foxmail.com">Email</a> · 
+                <a href="https://github.com/fenglang918">GitHub</a> · 
+                <a href="https://www.xiaohongshu.com/user/profile/6120ecdb00000000010020ba">RedNote</a>
             </div>
             <div class="nav">
                 <a href="#research">Research</a>
                 <a href="#experience">Experience</a>
                 <a href="#publications">Publications</a>
                 <a href="#education">Education</a>
-                <a href="#honors">Honors</a>
-                <a href="#service">Service</a>
                 <a href="photography.html">Photography</a>
             </div>
         </div>
@@ -198,70 +198,67 @@
         <section id="research">
             <h2>Research</h2>
             <ul>
-                <li><strong>Research focus:</strong> LLM data synthesis; Efficient AIGC</li>
+                <li><strong>Focus:</strong> LLM data synthesis, Efficient AIGC</li>
             </ul>
-            <p>My long-term research interest is: <strong>how can intelligence grow and scale, while remaining precisely calibrated to the complexity of the real world?</strong></p>
-            <p>More specifically, I am currently studying how to use agents to synthesize data, improve LLM performance in science-related domains, and further build the benchmarks that science needs. As human-generated data is rapidly compressed into model intelligence, synthetic data is destined to become a key approach for LLM self-learning and unbounded growth. At the same time, we need to continuously design high-quality benchmarks to calibrate model intelligence. These benchmarks are also the ultimate reward in reinforcement learning: we propose increasingly challenging benchmarks, and then use reinforcement learning and related techniques to design more fine-grained reward signals to train the self-learning of LLMs.</p>
+            <p>My long-term research interest lies in <strong>how intelligence can grow and scale while remaining precisely calibrated to the complexity of the real world.</strong></p>
+            <p>Specifically, I am studying how to use agents to synthesize data, improve LLM performance in science-related domains, and build benchmarks that science needs. As human-generated data is compressed into models, synthetic data is key for unbounded growth. Simultaneously, high-quality benchmarks are essential to calibrate model intelligence and serve as fine-grained reward signals for reinforcement learning.</p>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <h3>Alibaba – Platform Technology × Shanghai Jiao Tong University, Academic Collaboration Project</h3>
-            <p>Agent-based data synthesis and benchmark construction · 2025.11–Present</p>
+            <h3>Alibaba – Platform Technology × SJTU</h3>
+            <p>Academic Collaboration · 2025.11–Present<br>
+            <span style="color: #666; font-size: 0.95em;">Agent-based data synthesis and benchmark construction.</span></p>
             
-            <h3>ByteDance — Data-AML, Scientific Computing</h3>
-            <p>Back-end Development Intern. 2024.06–2024.08</p>
+            <h3>ByteDance — Data-AML</h3>
+            <p>Scientific Computing Intern · 2024.06–2024.08<br>
+            <span style="color: #666; font-size: 0.95em;">Back-end Development.</span></p>
             
-            <h3>EPIC Lab (Prof. Linfeng Zhang), Shanghai Jiao Tong University</h3>
-            <p>Research assistant. 2024.03–Present</p>
+            <h3>EPIC Lab (SJTU)</h3>
+            <p>Research Assistant · 2024.03–Present<br>
+            <span style="color: #666; font-size: 0.95em;">Advisor: Prof. Linfeng Zhang.</span></p>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
             <h3>HiCache: A Plug-in Scaled-Hermite Upgrade for Taylor-Style Cache-then-Forecast Diffusion Acceleration.</h3>
-            <p>Co-first Author. Under review at ICLR 2026. Domain: Efficient AI; CV; DiT.</p>
+            <p><em>Under review at ICLR 2026.</em> (Co-first Author)<br>
+            Domain: Efficient AI; CV; DiT.</p>
             
             <h3>Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers.</h3>
-            <p>Co-second Author. Second-round review at AAAI 2026. Domain: Efficient AI; CV; DiT.</p>
+            <p><em>Second-round review at AAAI 2026.</em> (Co-second Author)<br>
+            Domain: Efficient AI; CV; DiT.</p>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <h3>The Hong Kong University of Science and Technology (Guangzhou) · 2026.09–</h3>
-            <p>PhD in Artificial Intelligence; will enroll in Fall 2026; advisor: <a href="https://sai.sjtu.edu.cn/cn/facultydetails/zzjs/zhanglinfeng">Prof. Linfeng Zhang (张林峰)</a>.</p>
+            <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
+            <p>PhD in Artificial Intelligence · 2026.09 (Prospective)<br>
+            Advisor: <a href="https://sai.sjtu.edu.cn/cn/facultydetails/zzjs/zhanglinfeng">Prof. Linfeng Zhang</a>.</p>
             
-            <h3>Fudan University, School of Economics · 2024.09–2026.06</h3>
-            <p>Master of Finance (MFin), Financial Technology (FinTech); admitted via Summer Camp recommendation; Entrance Scholarship: RMB 55,000.</p>
+            <h3>Fudan University</h3>
+            <p>Master of Finance (FinTech) · 2024.09–2026.06<br>
+            Entrance Scholarship: RMB 55,000.</p>
             
-            <h3>University of Electronic Science and Technology of China (UESTC) · 2020.09–2024.06</h3>
-            <p>Dual-degree "Internet+" Elite Program: Finance + Data Science and Big Data Technology. GPA: 91.08 /100; Honors: National Scholarship; Outstanding Graduate.</p>
+            <h3>UESTC</h3>
+            <p>Dual-degree "Internet+" Elite Program · 2020.09–2024.06<br>
+            Finance + Data Science. GPA: 91.08/100. National Scholarship.</p>
         </section>
 
         <section id="honors">
             <h2>Honors & Awards</h2>
             <ul>
-                <li>Fudan SOE Entrance Scholarship: RMB 55,000. (2024)</li>
-                <li>National Scholarship. (2020–2021)</li>
-                <li>Outstanding Graduate. (2020–2024)</li>
-                <li>UESTC Sports Meeting: 3000m, 4th place (11:42, 2020).</li>
-                <li>Sichuan Provincial High School Physics Competition: Second Prize (2017).</li>
-                <li>USTC Junior Class selection attempt: took Gaokao early with a score of 627. (2018)</li>
-                <li>FLTRP University English Challenge (Reading): Provincial Second Prize (2022).</li>
-            </ul>
-        </section>
-
-        <section id="service">
-            <h2>Academic Service</h2>
-            <ul>
-                <li>Server Administrator, EPIC Lab (SJTU).</li>
-                <li>Teaching Assistant, Freshman Hackathon, School of AI, Shanghai Jiao Tong University.</li>
+                <li>Fudan SOE Entrance Scholarship (2024)</li>
+                <li>National Scholarship (2020–2021)</li>
+                <li>Outstanding Graduate (2024)</li>
+                <li>Provincial Second Prize, FLTRP English Challenge (2022)</li>
+                <li>Sichuan Provincial High School Physics Competition: Second Prize (2017)</li>
             </ul>
         </section>
 
         <div class="footer">
-            <p>© 2025 Liang Feng. All rights reserved.</p>
+            <p>© 2025 Liang Feng. All Rights Reserved.</p>
         </div>
     </div>
 </body>
 </html>
-
