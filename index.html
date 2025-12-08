@@ -6,25 +6,23 @@
     <title>Liang Feng (冯亮)</title>
     <style>
         body {
-            /* 字体组合：标题用 Georgia (衬线)，正文用 Inter/System (无衬线) */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.7;
-            color: #1a1a1a; /* 更深的纯黑，像印刷品 */
-            background: #fcfcfc; /* 极淡的暖白，不刺眼 */
+            color: #1a1a1a;
+            background: #fcfcfc;
             min-height: 100vh;
             padding: 40px 20px;
             margin: 0;
         }
 
         .container {
-            max-width: 800px; /* 稍微收窄，提升阅读体验 */
+            max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
-            /* 去掉显眼的边框，用极轻微的阴影 */
             box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
             border: 1px solid rgba(0,0,0,0.05);
             border-radius: 12px;
-            padding: 60px 50px; /* 增加内边距，留白更多 */
+            padding: 60px 50px;
         }
         
         .header {
@@ -37,10 +35,9 @@
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            /* 去掉粗边框，更自然 */
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin-bottom: 20px;
-            filter: grayscale(10%); /* 轻微去色，更有质感 */
+            filter: grayscale(10%);
             transition: filter 0.3s ease;
         }
 
@@ -49,11 +46,11 @@
         }
         
         h1 {
-            font-family: "Georgia", "Times New Roman", serif; /* 学术/杂志感 */
+            font-family: "Georgia", "Times New Roman", serif;
             color: #111;
             margin-bottom: 10px;
             font-size: 2.2em;
-            font-weight: 400; /* 不加粗，更优雅 */
+            font-weight: 400;
             letter-spacing: -0.02em;
         }
         
@@ -74,7 +71,7 @@
         
         .contact-links a:hover {
             color: #000;
-            border-bottom: 1px solid #000; /* 悬停显示下划线 */
+            border-bottom: 1px solid #000;
         }
         
         .nav {
@@ -126,7 +123,7 @@
             margin-bottom: 16px;
             text-align: justify;
             color: #444;
-            font-size: 1.02em; /* 稍微大一点的正文 */
+            font-size: 1.02em;
         }
         
         ul {
@@ -139,7 +136,7 @@
         }
         
         a {
-            color: #0ea371; /* 保留一点点 OpenAI 绿作为强调色，或者改用深蓝 */
+            color: #0ea371;
             text-decoration: none;
         }
         
@@ -150,6 +147,22 @@
         strong {
             color: #000;
             font-weight: 600;
+        }
+        
+        .publication-item {
+            margin-bottom: 24px;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: #111;
+            font-size: 1.05em;
+        }
+        
+        .publication-meta {
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
         }
         
         .footer {
@@ -197,11 +210,8 @@
 
         <section id="research">
             <h2>Research</h2>
-            <ul>
-                <li><strong>Focus:</strong> LLM data synthesis, Efficient AIGC</li>
-            </ul>
-            <p>My long-term research interest lies in <strong>how intelligence can grow and scale while remaining precisely calibrated to the complexity of the real world.</strong></p>
-            <p>Specifically, I am studying how to use agents to synthesize data, improve LLM performance in science-related domains, and build benchmarks that science needs. As human-generated data is compressed into models, synthetic data is key for unbounded growth. Simultaneously, high-quality benchmarks are essential to calibrate model intelligence and serve as fine-grained reward signals for reinforcement learning.</p>
+            <p>My long-term research vision is to <strong>bridge the gap between scalable intelligence and physical reality</strong>.</p>
+            <p>Currently, I focus on <strong>LLM Data Synthesis</strong> and <strong>Efficient AIGC</strong>. I investigate how to leverage agents for high-quality data synthesis to scale post-training, particularly in scientific domains. Simultaneously, I am building rigorous benchmarks to align model capabilities with complex real-world dynamics, treating evaluation as the ultimate reward signal for reinforcement learning.</p>
         </section>
 
         <section id="experience">
@@ -221,19 +231,28 @@
 
         <section id="publications">
             <h2>Publications</h2>
-            <h3>HiCache: A Plug-in Scaled-Hermite Upgrade for Taylor-Style Cache-then-Forecast Diffusion Acceleration.</h3>
-            <p><em>Under review at ICLR 2026.</em> (Co-first Author)<br>
-            Domain: Efficient AI; CV; DiT.</p>
             
-            <h3>Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers.</h3>
-            <p><em>Second-round review at AAAI 2026.</em> (Co-second Author)<br>
-            Domain: Efficient AI; CV; DiT.</p>
+            <div class="publication-item">
+                <div class="publication-title">HiCache: A Plug-in Scaled-Hermite Upgrade for Taylor-Style Cache-then-Forecast Diffusion Acceleration</div>
+                <div class="publication-meta">
+                    <strong>Liang Feng*</strong>, et al. (Co-first Author)<br>
+                    Under review at <strong>ICLR 2026</strong>.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers</div>
+                <div class="publication-meta">
+                    Co-second Author<br>
+                    Second-round review at <strong>AAAI 2026</strong>.
+                </div>
+            </div>
         </section>
 
         <section id="education">
             <h2>Education</h2>
             <h3>The Hong Kong University of Science and Technology (Guangzhou)</h3>
-            <p>PhD in Artificial Intelligence · 2026.09 (Prospective)<br>
+            <p><strong>Incoming PhD Student</strong> in Artificial Intelligence · Fall 2026<br>
             Advisor: <a href="https://sai.sjtu.edu.cn/cn/facultydetails/zzjs/zhanglinfeng">Prof. Linfeng Zhang</a>.</p>
             
             <h3>Fudan University</h3>
