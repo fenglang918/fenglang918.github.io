@@ -39,6 +39,32 @@
             border-bottom: 1px solid #e5e7eb;
         }
         
+        .nav {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: #0f172a;
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 0.98em;
+            transition: all 0.18s ease;
+        }
+        
+        .nav a:hover {
+            background: #e5f5ee;
+            border-color: #0ea371;
+            color: #0c8b60;
+            transform: translateY(-1px);
+        }
+        
         .avatar {
             width: 176px;
             height: 176px;
@@ -158,9 +184,18 @@
                 <a href="https://github.com/fenglang918">💻 GitHub</a>
                 <a href="https://www.xiaohongshu.com/user/profile/6120ecdb00000000010020ba">📷 Xiaohongshu</a>
             </div>
+            <div class="nav">
+                <a href="#research">Research</a>
+                <a href="#experience">Experience</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+                <a href="#honors">Honors</a>
+                <a href="#service">Service</a>
+                <a href="photography.html">Photography</a>
+            </div>
         </div>
 
-        <section>
+        <section id="research">
             <h2>Research</h2>
             <ul>
                 <li><strong>Research focus:</strong> LLM data synthesis; Efficient AIGC</li>
@@ -169,7 +204,7 @@
             <p>More specifically, I am currently studying how to use agents to synthesize data, improve LLM performance in science-related domains, and further build the benchmarks that science needs. As human-generated data is rapidly compressed into model intelligence, synthetic data is destined to become a key approach for LLM self-learning and unbounded growth. At the same time, we need to continuously design high-quality benchmarks to calibrate model intelligence. These benchmarks are also the ultimate reward in reinforcement learning: we propose increasingly challenging benchmarks, and then use reinforcement learning and related techniques to design more fine-grained reward signals to train the self-learning of LLMs.</p>
         </section>
 
-        <section>
+        <section id="experience">
             <h2>Experience</h2>
             <h3>Alibaba – Platform Technology × Shanghai Jiao Tong University, Academic Collaboration Project</h3>
             <p>Agent-based data synthesis and benchmark construction · 2025.11–Present</p>
@@ -181,7 +216,7 @@
             <p>Research assistant. 2024.03–Present</p>
         </section>
 
-        <section>
+        <section id="publications">
             <h2>Publications</h2>
             <h3>HiCache: A Plug-in Scaled-Hermite Upgrade for Taylor-Style Cache-then-Forecast Diffusion Acceleration.</h3>
             <p>Co-first Author. Under review at ICLR 2026. Domain: Efficient AI; CV; DiT.</p>
@@ -190,7 +225,7 @@
             <p>Co-second Author. Second-round review at AAAI 2026. Domain: Efficient AI; CV; DiT.</p>
         </section>
 
-        <section>
+        <section id="education">
             <h2>Education</h2>
             <h3>The Hong Kong University of Science and Technology (Guangzhou) · 2026.09–</h3>
             <p>PhD in Artificial Intelligence; will enroll in Fall 2026; advisor: <a href="https://sai.sjtu.edu.cn/cn/facultydetails/zzjs/zhanglinfeng">Prof. Linfeng Zhang (张林峰)</a>.</p>
@@ -202,7 +237,7 @@
             <p>Dual-degree "Internet+" Elite Program: Finance + Data Science and Big Data Technology. GPA: 91.08 /100; Honors: National Scholarship; Outstanding Graduate.</p>
         </section>
 
-        <section>
+        <section id="honors">
             <h2>Honors & Awards</h2>
             <ul>
                 <li>Fudan SOE Entrance Scholarship: RMB 55,000. (2024)</li>
@@ -215,7 +250,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="service">
             <h2>Academic Service</h2>
             <ul>
                 <li>Server Administrator, EPIC Lab (SJTU).</li>

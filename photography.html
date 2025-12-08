@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - Liang Feng</title>
+    <style>
+        body {
+            font-family: "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #0f172a;
+            background: #f9fafb;
+            min-height: 100vh;
+            padding: 24px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.07);
+            padding: 42px;
+            margin-top: 12px;
+            margin-bottom: 32px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        h1 {
+            font-family: "SF Pro Display", "Inter", "Helvetica Neue", Arial, sans-serif;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 2.1em;
+            letter-spacing: 0.2px;
+            font-weight: 700;
+        }
+        
+        .nav {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: #0f172a;
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 0.98em;
+            transition: all 0.18s ease;
+        }
+        
+        .nav a:hover {
+            background: #e5f5ee;
+            border-color: #0ea371;
+            color: #0c8b60;
+            transform: translateY(-1px);
+        }
+        
+        .intro {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 26px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        
+        .card {
+            background: #fdfefe;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+        }
+        
+        .card img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            max-height: 280px;
+        }
+        
+        .caption {
+            padding: 12px 14px 14px 14px;
+            color: #1f2937;
+            font-size: 0.98em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            padding-top: 18px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Photography</h1>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#research">Research</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#publications">Publications</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#honors">Honors</a>
+                <a href="index.html#service">Service</a>
+            </div>
+        </div>
+        
+        <p class="intro">Selected works from my photography collection.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="photograph/loveletter1.jpg" alt="Love Letter">
+                <div class="caption">Loveletter — portrait and mood study.</div>
+            </div>
+            <div class="card">
+                <img src="photograph/xiaozhangCircle.jpg" alt="Circle">
+                <div class="caption">Circle — symmetry and light in motion.</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Liang Feng. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
