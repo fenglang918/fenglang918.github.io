@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冯亮 (Liang Feng)</title>
+    <style>
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fcfcfc;
+            min-height: 100vh;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 60px 50px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.9em;
+            font-family: "Georgia", serif;
+        }
+
+        .lang-switch a {
+            color: #999;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        .lang-switch a.active {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            filter: grayscale(10%);
+            transition: filter 0.3s ease;
+        }
+
+        .avatar:hover {
+            filter: grayscale(0%);
+        }
+        
+        h1 {
+            font-family: "Songti SC", "SimSun", serif; /* 中文宋体 */
+            color: #111;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .contact-links {
+            margin-top: 16px;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        .contact-links a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .contact-links a:hover {
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+        
+        .nav {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            font-family: "Songti SC", "SimSun", serif;
+            color: #666;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: color 0.2s ease;
+        }
+        
+        .nav a:hover {
+            color: #000;
+        }
+
+        section {
+            margin: 50px 0;
+        }
+        
+        h2 {
+            font-family: "Songti SC", "SimSun", serif;
+            color: #111;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #222;
+            margin-top: 24px;
+            margin-bottom: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            color: #444;
+            font-size: 1.02em;
+        }
+        
+        ul {
+            margin-left: 20px;
+            color: #444;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #0ea371;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        strong {
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .publication-item {
+            margin-bottom: 24px;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            color: #111;
+            font-size: 1.05em;
+        }
+        
+        .publication-meta {
+            color: #666;
+            font-style: italic;
+            margin-top: 4px;
+            font-family: "Georgia", serif;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+            font-family: "Songti SC", "SimSun", serif;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                border: none;
+                box-shadow: none;
+                background: transparent;
+            }
+            body {
+                padding: 0;
+            }
+            .lang-switch {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="lang-switch">
+                <a href="index.html">EN</a> | <a href="index_cn.html" class="active">中文</a>
+            </div>
+            <img src="https://raw.githubusercontent.com/fenglang918/fenglang918/main/selfie.jpg" alt="Liang Feng" class="avatar">
+            <h1>冯亮 (Liang Feng)</h1>
+            <div class="contact-links">
+                <a href="mailto:fenglang918@foxmail.com">Email</a> · 
+                <a href="https://github.com/fenglang918">GitHub</a> · 
+                <a href="https://www.xiaohongshu.com/user/profile/6120ecdb00000000010020ba">小红书</a>
+            </div>
+            <div class="nav">
+                <a href="#research">研究</a>
+                <a href="#experience">经历</a>
+                <a href="#publications">发表</a>
+                <a href="#education">教育</a>
+                <a href="photography_cn.html">摄影</a>
+            </div>
+        </div>
+
+        <section id="research">
+            <h2>研究方向</h2>
+            <p>我的长期研究愿景是<strong>弥合可扩展智能与物理现实之间的鸿沟</strong>。</p>
+            <p>目前，我专注于<strong>LLM 数据合成</strong>与<strong>高效 AIGC</strong>。我致力于探索如何利用智能体（Agents）进行高质量的数据合成，以扩展模型的后训练（Post-training），特别是在科学领域。同时，我正在构建严谨的基准测试（Benchmarks），将模型能力与复杂的现实世界动态对齐，并将评估作为强化学习的终极奖励信号。</p>
+        </section>
+
+        <section id="experience">
+            <h2>经历</h2>
+            <h3>阿里巴巴 – 平台技术 × 上海交通大学</h3>
+            <p>学术合作项目 · 2025.11–至今<br>
+            <span style="color: #666; font-size: 0.95em;">基于 Agent 的数据合成与基准构建。</span></p>
+            
+            <h3>字节跳动 — Data-AML</h3>
+            <p>科学计算实习生 · 2024.06–2024.08<br>
+            <span style="color: #666; font-size: 0.95em;">后端开发。</span></p>
+            
+            <h3>EPIC Lab (上海交通大学)</h3>
+            <p>科研助理 · 2024.03–至今<br>
+            <span style="color: #666; font-size: 0.95em;">导师: <a href="https://sai.sjtu.edu.cn/cn/facultydetails/zzjs/zhanglinfeng">张林峰教授</a>。</span></p>
+        </section>
+
+        <section id="publications">
+            <h2>发表</h2>
+            
+            <div class="publication-item">
+                <div class="publication-title">HiCache: A Plug-in Scaled-Hermite Upgrade for Taylor-Style Cache-then-Forecast Diffusion Acceleration</div>
+                <div class="publication-meta">
+                    <strong>Liang Feng*</strong>, et al. (共同一作)<br>
+                    Under review at <strong>ICLR 2026</strong>.
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Forecast then Calibrate: Feature Caching as ODE for Efficient Diffusion Transformers</div>
+                <div class="publication-meta">
+                    Co-second Author (共同二作)<br>
+                    Second-round review at <strong>AAAI 2026</strong>.
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>教育背景</h2>
+            <h3>香港科技大学 (广州)</h3>
+            <p>人工智能博士生 (候补) · 2026 秋季入学<br>
+            导师: <a href="https://sai.sjtu.edu.cn/cn/facultydetails/zzjs/zhanglinfeng">张林峰教授</a>。</p>
+            
+            <h3>复旦大学</h3>
+            <p>金融硕士 (金融科技方向) · 2024.09–2026.06<br>
+            入学奖学金: 55,000 RMB。</p>
+            
+            <h3>电子科技大学</h3>
+            <p>“互联网+”复合培养实验班 · 2020.09–2024.06<br>
+            金融学 + 数据科学与大数据技术双学位。GPA: 91.08/100。国家奖学金。</p>
+        </section>
+
+        <section id="honors">
+            <h2>荣誉与奖项</h2>
+            <ul>
+                <li>复旦大学经济学院入学奖学金 (2024)</li>
+                <li>国家奖学金 (2020–2021)</li>
+                <li>四川省优秀毕业生 (2024)</li>
+                <li>外研社·国才杯英语阅读大赛 省级二等奖 (2022)</li>
+                <li>四川省高中物理竞赛 二等奖 (2017)</li>
+            </ul>
+        </section>
+
+        <div class="footer">
+            <p>© 2025 冯亮 (Liang Feng). All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
