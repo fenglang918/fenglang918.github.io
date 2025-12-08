@@ -28,6 +28,26 @@
         .header {
             text-align: center;
             margin-bottom: 50px;
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.9em;
+            font-family: "Georgia", serif;
+        }
+
+        .lang-switch a {
+            color: #999;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        .lang-switch a.active {
+            color: #000;
+            font-weight: bold;
         }
         
         .avatar {
@@ -186,12 +206,19 @@
             body {
                 padding: 0;
             }
+            .lang-switch {
+                position: static;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <div class="lang-switch">
+                <a href="index.html" class="active">EN</a> | <a href="index_cn.html">中文</a>
+            </div>
             <img src="https://raw.githubusercontent.com/fenglang918/fenglang918/main/selfie.jpg" alt="Liang Feng" class="avatar">
             <h1>Liang Feng (冯亮)</h1>
             <div class="contact-links">

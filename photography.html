@@ -30,6 +30,26 @@
             margin-bottom: 60px;
             padding-bottom: 20px;
             border-bottom: 1px solid #f0f0f0;
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.9em;
+            font-family: "Georgia", serif;
+        }
+
+        .lang-switch a {
+            color: #999;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+
+        .lang-switch a.active {
+            color: #000;
+            font-weight: bold;
         }
 
         h1 {
@@ -129,6 +149,7 @@
             color: #888;
             font-family: "Inter", sans-serif;
             text-align: right;
+            line-height: 1.5;
         }
 
         .footer {
@@ -164,7 +185,7 @@
 
         .lightbox img {
             max-width: 90%;
-            max-height: 90vh;
+            max-height: 85vh;
             object-fit: contain;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
         }
@@ -178,12 +199,25 @@
             color: #333;
             font-family: "Georgia", serif;
             font-style: italic;
+            padding: 0 20px;
+            box-sizing: border-box;
+            white-space: pre-line;
+        }
+        
+        @media (max-width: 768px) {
+            .lang-switch {
+                position: static;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            <div class="lang-switch">
+                <a href="photography.html" class="active">EN</a> | <a href="photography_cn.html">中文</a>
+            </div>
             <h1>Photography</h1>
             <div class="nav">
                 <a href="index.html">Home</a>
@@ -197,7 +231,17 @@
         <div class="gallery">
             <div class="photo-item" onclick="openLightbox(this)">
                 <img src="photograph/loveletter1.jpg" alt="Love Letter">
-                <div class="caption">Loveletter</div>
+                <div class="caption">I strive to restrain my emotions, like secrets etched onto a window pane, condensed into frost by the winter wind—perhaps this is the peace I long for.
+
+I finished yesterday's book, tore up the unsent letters, and cast them into the drifting snow. Forgive me, for there is no hearth in my room to burn them completely.
+
+Look how beautifully these paper fragments dance, like fallen leaves still chasing the deep autumn.
+
+I still haven't managed to work hard every day. Today, I revisited the scenes from our dreams. I spent the whole night editing just two photos to send to you.
+
+This uncontrollable waste of life.
+
+—— "Love Letter"</div>
             </div>
             <div class="photo-item" onclick="openLightbox(this)">
                 <img src="photograph/xiaozhangCircle.jpg" alt="Spinning in the Autumn Sun">
