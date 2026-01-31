@@ -1,18 +1,30 @@
 # fenglang918.github.io
 
-Personal website (GitHub Pages) for **Liang Feng (冯亮)**.
+Source for my personal website (GitHub Pages).
 
-- Live site: `https://fenglang918.github.io/`
-- Main pages:
-  - `index.html` (EN)
-  - `index_cn.html` (中文)
-  - `photography.html` / `photography_cn.html`
+- Website: `https://fenglang918.github.io/`
+- Owner: Liang Feng (冯亮)
 
-## Update / Deploy
+## Pages
 
-This repo is deployed via GitHub Pages from the `main` branch.
+- `index.html` (English)
+- `index_cn.html` (中文)
+- `photography.html` / `photography_cn.html`
+- Images: `selfie.jpg`, `photograph/`
 
-To update the site, edit the HTML/assets and push to `main`:
+## Local Preview
+
+No build step — it’s plain static HTML/CSS. You can preview it locally:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000/`.
+
+## Deploy
+
+GitHub Pages deploys from the `main` branch. Push to update:
 
 ```bash
 git add .
@@ -20,5 +32,9 @@ git commit -m "docs: update site"
 git push origin main
 ```
 
-GitHub Pages usually updates within a few minutes after push.
+It usually becomes visible within a few minutes (sometimes longer due to caching).
 
+## Notes
+
+- This is a personal site repo; please open an issue/PR for typos or broken links.
+- Please don’t reuse photos or other personal content without permission.
